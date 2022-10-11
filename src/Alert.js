@@ -1,6 +1,19 @@
 import React from "react"
 const Alert = props => {
-	//add the condition inside this function
+	
+	//Create an <Alert /> component that renders a bootstrap alert. The component must be able to receive the following 2 properties:
+	//show (bool): True or false.
+	//text (string): The message to include inside the alert message.
+	//If show is false, the component should not render anything.
+	//If show is true, the component should render a bootstrap alert with the text provided.
+
+	if (props.show === false) {
+		return null
+	} else {
+		 return <div className="alert alert-primary" role="alert">
+		 	{props.text}
+		 </div>
+	}
 
 	return (
 		<div className="alert alert-danger" role="alert">
